@@ -127,7 +127,7 @@
         android:layout_alignTop="@id/topView"
         android:background="#E91E63"
         android:padding="10dp"
-        android:text="Bottom end"
+        android:text="Top end"
         android:textColor="#fff" />
 
     <TextView
@@ -164,13 +164,55 @@
         android:id="@+id/betweenTwoViewsVertically"
         android:layout_width="40dp"
         android:layout_height="0dp"
-        android:layout_above="@id/bottomEnd"
-        android:layout_below="@id/topEnd"
+
+        android:layout_alignTop="@id/bottomEnd"
+
+        android:layout_alignBottom="@id/topEnd"
+
         android:layout_alignParentEnd="true"
+
         android:background="#FF5722"
         android:gravity="center"
         android:padding="10dp"
         android:text="V\ne\nr\nt\ni\nc\na\nl"
         android:textColor="#fff" />
+
+
+    <!-- Растягиваем View от края одного элемента до края другого -->
+    <TextView
+        android:id="@+id/fromStartOfOneToEndOfAnother"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_above="@id/topView"
+        android:layout_marginBottom="40dp"
+
+        android:layout_alignStart="@id/topStart"
+        android:layout_alignEnd="@id/topEnd"
+
+        android:background="#009688"
+        android:padding="10dp"
+        android:gravity="center"
+        android:text="From start of one view to end of another"
+        android:textColor="#fff" />
+
+    <!-- Элемент с двухсторонней привязкой по вертикали -->
+    <TextView
+        android:id="@+id/fromTopToBottom"
+        android:layout_width="40dp"
+        android:layout_height="0dp"
+
+        android:layout_alignTop="@id/fromStartOfOneToEndOfAnother"
+
+        android:layout_alignBottom="@id/topEnd"
+
+        android:layout_alignParentStart="true"
+
+        android:background="#009688"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="F\nr\no\nm\n\nt\no\np\n\nt\no\n\nb\no\nt\nt\no\nm"
+        android:textColor="#fff" />
+
 
 </RelativeLayout>
